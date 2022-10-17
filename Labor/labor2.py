@@ -89,12 +89,12 @@ def ellenorzes6D():
     db = 0
     for i in range(1,n+1):
         for j in range(i):
-            print(0, end=" ")
+            print(1, end=" ")
             db +=1
             if db == n:
                 return
         for j in range (i):
-            print(1, end=" ")
+            print(0, end=" ")
             db +=1
             if db == n:
                 return
@@ -115,15 +115,46 @@ def ellenorzes6G():
         else:
             print(2**(i//2), end=" ")
 
+def ellenorzes6F():
+    n = int(input("n="))
+    temp = 0
+    for i in range(1,n+1):
+        if (i%2!=0):
+            print(i, end=" ")
+            temp +=1
+            if temp == n:
+                return
+        else:
+            print(i, end=" ")
+            temp += 1
+            if temp == n:
+                return
+            print(i, end=" ")
+            temp += 1
+            if temp == n:
+                return
+
+def ellenorzes6H():
+    n = int(input("n="))
+    p = 2
+    temp = 0
+    print(p, end=" ")
+    for i in range(1,n+1):
+        p = p * p
+        print(p, end=" ")
+        temp += 1
+        if temp == n:
+            return
+
 def fibonacci():
     n= int(input("n="))
     a, b = 0,1
-    #print(a, b, end=" ")
+    print(a, b, end=" ")
     for i in range(n-1):
         c, a = a + b, b
         b = c
-        #print(c, end=" ")
-    print(c)
+        print(c, end=" ")
+    #print(c)
 
 def digit_number(nr):
     temp = int(math.log(nr, 10))
@@ -156,11 +187,11 @@ def main():
     #ellenorzes4_()
     #ellenorzes4()
     #ellenorzes5()
-    #fibonacci()
+    fibonacci()
     #print(factorial_number(10))
     #print(maxFactDigit(5))
     #ellenorzes6C()
-    ellenorzes6E()
+    #ellenorzes6H()
 
     return 0
 
