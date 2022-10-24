@@ -154,6 +154,19 @@ def lancTortPhi(p):
 
     return 1+temp
 
+def fibPair(n):
+    a, b = 0, 1
+    for i in range(n - 1):
+        c, a = a + b, b
+        b = c
+    return b, a
+
+from decimal import Decimal, getcontext
+def myPhi3(n):
+    getcontext().prec = 500
+    f2, f1 = fibPair(n)
+    return Decimal(f2)/ Decimal(f1)
+
 def hazi_feladat_irreducibilis(n):
     for k in range(1,n+1):
         for j in range(1,k+1):
@@ -179,11 +192,11 @@ def main():
     #print(lancT(89,55))
     #print(lancTortGyokKetto(30))
     #print(lancTortPi(100))
-    print(lancTortE(100))
+    #print(lancTortE(100))
     #print(lancTortPhi(100))
+    print(myPhi3(10))
 
     return 0
-
 
 if __name__ == '__main__':
     main()

@@ -187,11 +187,12 @@ def main():
     #ellenorzes4_()
     #ellenorzes4()
     #ellenorzes5()
-    fibonacci()
+    #fibonacci()
     #print(factorial_number(10))
     #print(maxFactDigit(5))
     #ellenorzes6C()
     #ellenorzes6H()
+    print(digit_number(10))
 
     return 0
 
